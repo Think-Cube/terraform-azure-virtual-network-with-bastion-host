@@ -6,7 +6,7 @@ resource "azurerm_bastion_host" "main" {
 
   ip_configuration {
     name                 = "bastion_config"
-    subnet_id            = "${azurerm_subnet.main["bastion_subnet"].id}"
+    subnet_id            = "${azurerm_subnet.main["bastion"].id}"
     public_ip_address_id = "${azurerm_public_ip.main.id}"
   }
 

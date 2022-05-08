@@ -61,7 +61,7 @@ No modules.
 ```
 module "virtual-network-with-bastion-host" {
   source  = "spy86/virtual-network-with-bastion-host/azure"
-  version = "1.0.2"
+  version = "1.0.3"
   resource_group_name = "weu-test-rg"
   environment = "dev"
   region = "weu"
