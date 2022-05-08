@@ -55,3 +55,39 @@ No modules.
 | <a name="output_name"></a> [name](#output\_name) | The name of the virtual network. |
 | <a name="output_resource_group_name"></a> [resource\_group\_name](#output\_resource\_group\_name) | The name of the resource group in which to create the virtual network. |
 <!-- END_TF_DOCS -->
+
+## How to use
+
+```
+module "virtual-network-with-bastion-host" {
+  source  = "spy86/virtual-network-with-bastion-host/azure"
+  version = "1.0.0"
+  resource_group_name = "weu-test-rg"
+  environment = "dev"
+  region = "weu"
+  resource_group_location = "West Europe"
+  vnet_address_space = "10.0.0.0/16"
+  vnet_name = "VirtualNetwork"
+  subnet_prefix = {
+    subnet_1 = {
+      ip = ["10.0.1.0/24"]
+      name  = "Subnet_1"
+    }
+    subnet_2 = {
+      ip = ["10.0.2.0/24"]
+      name = "Subnet_2"
+    }
+    subnet_3 = {
+      ip = ["10.0.3.0/24"]
+      name = "Subnet_3"
+    }
+  }
+  default_tags = {
+      Administrator = "Someone"
+      Department = "IT"
+      CostCentre = "ABC123"
+      ContactPerson = "Someone@example.com"
+      ManagedByTerraform = "True"
+}
+}
+```
