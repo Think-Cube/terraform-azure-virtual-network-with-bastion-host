@@ -1,0 +1,12 @@
+resource "azurerm_bastion_host" "main" {
+  name                = "${var.environment}-${var.bastionhost_name}-${var.region}-bas"
+  location            = "${data.azurerm_resource_group.rg.location}"
+  resource_group_name = "${data.azurerm_resource_group.rg.name}"
+  tags                = "${var.default_tags}"
+
+  ip_configuration {
+    name                 = "bastion_config"
+    subnet_id            = "${azurerm_subnet.main["bastion_subnet"].id}"
+    public_ip_address_id = "${azurerm_public_ip.main.id}"
+  }
+}
