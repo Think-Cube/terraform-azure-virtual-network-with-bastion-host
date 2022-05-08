@@ -9,4 +9,6 @@ resource "azurerm_bastion_host" "main" {
     subnet_id            = "${azurerm_subnet.main["bastion_subnet"].id}"
     public_ip_address_id = "${azurerm_public_ip.main.id}"
   }
+
+depends_on = [ "azurerm_virtual_network.main", "azurerm_subnet.main" ] 
 }
