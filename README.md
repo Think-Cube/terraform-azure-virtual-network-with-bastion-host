@@ -81,6 +81,10 @@ module "virtual-network-with-bastion-host" {
       ip = ["10.0.3.0/24"]
       name = "Subnet_3"
     }
+    bastion = {
+      ip = ["10.0.250.0/24"]
+      name = "AzureBastionSubnet"
+    }
   }
   default_tags = {
       Administrator = "Someone"

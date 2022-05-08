@@ -1,5 +1,5 @@
 data "azurerm_subnet" "maindata" {
-  name                 = "bastion"
+  name                 = "AzureBastionSubnet"
   virtual_network_name = "${var.environment}-${var.vnet_name}-${var.region}-vnet"
   resource_group_name  = "${data.azurerm_resource_group.rg.name}"
 
