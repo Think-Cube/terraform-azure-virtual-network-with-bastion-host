@@ -59,9 +59,13 @@ No modules.
 ## How to use
 
 ```
+provider "azurerm" {
+features {}
+}
+
 module "virtual-network-with-bastion-host" {
   source  = "spy86/virtual-network-with-bastion-host/azure"
-  version = "1.0.7"
+  version = "1.0.8"
   resource_group_name = "weu-test-rg"
   environment = "dev"
   region = "weu"
