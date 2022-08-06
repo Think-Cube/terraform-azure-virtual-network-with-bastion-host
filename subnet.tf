@@ -5,5 +5,5 @@ resource "azurerm_subnet" "main" {
   name                 = each.value["name"]
   address_prefixes     = each.value["ip"]
 
-depends_on = [ "azurerm_virtual_network.main" ] 
+depends_on = [ azurerm_virtual_network.main ] 
 }
