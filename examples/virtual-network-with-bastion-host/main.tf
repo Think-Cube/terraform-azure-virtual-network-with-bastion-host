@@ -2,9 +2,9 @@ provider "azurerm" {
 features {}
 }
 
-module "virtual-network-with-bastion-host" {
-  source  = "spy86/virtual-network-with-bastion-host/azure"
-  version = "1.0.9"
+module "virtual_network_with_bastion_host" {
+  source  = "Think-Cube/virtual-network-with-bastion-host/azure"
+  version = "1.0.0"
   resource_group_name = "weu-test-rg"
   environment = "dev"
   region = "weu"
@@ -30,10 +30,10 @@ module "virtual-network-with-bastion-host" {
     }
   }
   default_tags = {
-      Administrator = "Someone"
-      Department = "IT"
-      CostCentre = "ABC123"
-      ContactPerson = "Someone@example.com"
+      Administrator     = "John Doe"
+      Department        = "IT"
+      CostCentre        = "CC123"
+      ContactPerson     = "Jane Smith"
       ManagedByTerraform = "True"
 }
 }
