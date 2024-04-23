@@ -5,7 +5,7 @@ features {}
 module "virtual_network_with_bastion_host" {
   source  = "Think-Cube/virtual-network-with-bastion-host/azure"
   version = "1.0.0"
-  resource_group_name = "weu-test-rg"
+  resource_group_name = "dev-test-weu-rg"
   environment = "dev"
   region = "weu"
   resource_group_location = "West Europe"
