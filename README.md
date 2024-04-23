@@ -1,34 +1,30 @@
 <!-- BEGIN_TF_DOCS -->
-## Requirements
+#### Requirements
 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6.4 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | 3.94.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | 3.100.0 |
 
-## Providers
+#### Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.94.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.100.0 |
 
-## Modules
-
-No modules.
-
-## Resources
+#### Resources
 
 | Name | Type |
 |------|------|
-| [azurerm_bastion_host.main](https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/bastion_host) | resource |
-| [azurerm_public_ip.main](https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/public_ip) | resource |
-| [azurerm_subnet.main](https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/subnet) | resource |
-| [azurerm_virtual_network.main](https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/virtual_network) | resource |
-| [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/client_config) | data source |
-| [azurerm_resource_group.main](https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/resource_group) | data source |
-| [azurerm_subnet.main](https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/subnet) | data source |
+| [azurerm_bastion_host.main](https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/bastion_host) | resource |
+| [azurerm_public_ip.main](https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/public_ip) | resource |
+| [azurerm_subnet.main](https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/subnet) | resource |
+| [azurerm_virtual_network.main](https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/virtual_network) | resource |
+| [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/client_config) | data source |
+| [azurerm_resource_group.main](https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/resource_group) | data source |
+| [azurerm_subnet.main](https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/subnet) | data source |
 
-## Inputs
+#### Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
@@ -44,7 +40,7 @@ No modules.
 | <a name="input_vnet_address_space"></a> [vnet\_address\_space](#input\_vnet\_address\_space) | The address space that is used the virtual network. You can supply more than one address space. | `string` | `"10.0.0.0/16"` | no |
 | <a name="input_vnet_name"></a> [vnet\_name](#input\_vnet\_name) | The name of the virtual network. Changing this forces a new resource to be created. | `string` | `"VirtualNetwork1"` | no |
 
-## Outputs
+#### Outputs
 
 | Name | Description |
 |------|-------------|
