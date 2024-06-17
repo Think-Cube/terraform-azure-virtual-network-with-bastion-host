@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '44 9 * * 1'
+    - cron: '31 3 * * 0'
 jobs:
   tfsec:
     name: Run tfsec sarif report
