@@ -1,32 +1,30 @@
-output "virtual_network" {
-  description = "Information about the virtual network."
-  value = {
-    name          = azurerm_virtual_network.main.name
-    id            = azurerm_virtual_network.main.id
-    address_space = azurerm_virtual_network.main.address_space
-  }
-  sensitive = false
+output "id" {
+  description = "The virtual NetworkConfiguration ID."
+  value       = azurerm_virtual_network.main.id
+  sensitive   = false
 }
-
-output "subnets" {
-  description = "Information about the subnets within the virtual network."
-  value = {
-    for subnet_name, subnet in azurerm_subnet.main : subnet_name => {
-      name             = subnet.name
-      id               = subnet.id
-      address_prefixes = subnet.address_prefixes
-    }
-  }
-  sensitive = false
+output "name" {
+  description = "The name of the virtual network."
+  value       = azurerm_virtual_network.main.name
+  sensitive   = false
 }
-
-output "bastion_host" {
-  description = "Information about the bastion host."
-  value = {
-    name           = azurerm_bastion_host.main.name
-    private_ip     = azurerm_bastion_host.main.ip_configuration[0].private_ip_address
-    public_ip      = azurerm_public_ip.main.ip_address
-    bastion_subnet = azurerm_bastion_host.main.ip_configuration[0].subnet_id
-  }
-  sensitive = false
+output "resource_group_name" {
+  description = "The name of the resource group in which to create the virtual network."
+  value       = azurerm_virtual_network.main.resource_group_name
+  sensitive   = false
+}
+output "location" {
+  description = "The location/region where the virtual network is created."
+  value       = azurerm_virtual_network.main.location
+  sensitive   = false
+}
+output "address_space" {
+  description = "The list of address spaces used by the virtual network."
+  value       = azurerm_virtual_network.main.address_space
+  sensitive   = false
+}
+output "bastion_pubip" {
+  value       = azurerm_public_ip.main.ip_address
+  description = "List the public IP of the bastion server"
+  sensitive   = false
 }
